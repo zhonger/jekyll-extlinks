@@ -13,5 +13,5 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
 
   s.add_runtime_dependency "jekyll", "~> 4.0"
-  s.add_runtime_dependency "nokogiri", "~> 1.10.4"
+  s.add_runtime_dependency "nokogiri", "~> 1"
 end
