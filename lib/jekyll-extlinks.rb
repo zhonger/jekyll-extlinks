@@ -44,6 +44,9 @@ module Jekyll
         if config['rel_exclude']
           rel_exclude = Array(config['rel_exclude'])
         end
+        if config['class_exclude']
+          class_exclude = Array(config['class_exclude'])
+        end
       end
       # Stop if no attributes were specified
       return content unless attributes
@@ -62,6 +65,12 @@ module Jekyll
             next unless !a.get_attribute('rel') || a.get_attribute('rel').empty?
             # Skip whitelisted hosts for the 'rel' attribute
             next if rel_exclude && contains_any(a.get_attribute('href'), rel_exclude)
+          end
+          if attr.downcase == 'class'
+            # If there's a class already don't change it
+            next unless !a.get_attribute('class') || a.get_attribute('class').empty?
+            # Skip whitelisted hosts for the 'class' attribute
+            next if class_exclude && contains_any(a.get_attribute('href'), class_exclude)
           end
           a.set_attribute(attr, value)
         end
