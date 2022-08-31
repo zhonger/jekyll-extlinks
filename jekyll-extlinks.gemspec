@@ -1,6 +1,6 @@
 Gem::Specification.new do |s|
   s.name        = "h2o-ac-jekyll-extlinks"
-  s.version     = "0.0.1"
+  s.version     = "0.0.2"
   s.date        = "2022-08-29"
   s.summary     = "Jekyll ExtLinks Plugin"
   s.description = <<-EOF
@@ -8,7 +8,7 @@ Gem::Specification.new do |s|
   EOF
   s.authors     = ["Dmitry Ogarkov"]
   s.email       = "dima@ogarkov.com"
-  s.files       = ["lib/jekyll-extlinks.rb", "Gemfile", "jekyll-extlinks.gemspec", "License", "README.md"]
+  s.files       = ["lib/h2o-ac-jekyll-extlinks.rb", "Gemfile", "jekyll-extlinks.gemspec", "License", "README.md"]
   s.homepage    = "https://github.com/zhonger/jekyll-extlinks/"
   s.license     = "MIT"
 
